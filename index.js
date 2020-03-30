@@ -186,7 +186,11 @@ for(let i = 0; i < items.length; i ++) {
 
 const elements = ['earth', 'wind', 'fire', 'water'];
 
-// Create a function called show first that passes back the first item in the given array.
+
+
+//Create a function called show first that passes back the first item 
+// in the given array.
+
 
 function showFirst(array, callback) {
   callback(array[0]);
@@ -194,6 +198,19 @@ function showFirst(array, callback) {
 
 showFirst(elements, (firstItem) => {
   alert(firstItem);
+});
+
+
+
+// Create a function like ‘showFirst’, but this time, show the length 
+// of the array passed.
+
+function showLength(array, callback) {
+  callback(array.length);
+}
+
+showLength(elements, (length) => {
+  alert(length);
 });
 
 
