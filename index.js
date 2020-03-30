@@ -127,6 +127,46 @@ var cruiseID = createIdForActionCelebs [1];
 console.log(cruiseID.id); // 101
 
 
+///////////    CALLBACKS      ///////////
+/* 
+Callback functions are just functions that are passed into other functions as arguments. 
+*/
+
+const functionFeeder = function(callback) {
+	callback('Hello from the inside of Function Feeder');
+  };
+  
+  functionFeeder((string) => { // invoking the function
+	alert(string); // alert a function that pops up a box in the browser.
+  });
+  
+  /*
+  functionFeeder respectively becomes what is known as a higher-order function or a callBack function, allowing it to take in a function as a parameter and executes a function when called with a function as the argument.
+  
+  functionFeeder respectively becomes what is known as a higher-order function or a callBack function, allowing it to take in a function as a parameter and executes a function when called with a function as the argument.
+  */
+  
+  // Example
+  function sayHello(name) {
+	console.log(`Hello, ${name}`);
+  }
+  
+  function callSayHelloWithLars(callback) {
+	const innerName = 'Lars';
+	callback(innerName);
+  }
+  
+  callSayHelloWithLars(sayHello);
+  
+  function callSayHelloWithRyan(callback) {
+	const newName = 'Ryan';
+	callback(newName);
+  }
+  
+  callSayHelloWithRyan(sayHello);
+  
+
+
 
 
 
