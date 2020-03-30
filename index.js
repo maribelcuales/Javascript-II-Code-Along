@@ -136,37 +136,65 @@ const functionFeeder = function(callback) {
 	callback('Hello from the inside of Function Feeder');
   };
   
-  functionFeeder((string) => { // invoking the function
+functionFeeder((string) => { // invoking the function
 	alert(string); // alert a function that pops up a box in the browser.
-  });
+});
   
-  /*
-  functionFeeder respectively becomes what is known as a higher-order function or a callBack function, allowing it to take in a function as a parameter and executes a function when called with a function as the argument.
+/*
+functionFeeder respectively becomes what is known as a higher-order function or a callBack function, allowing it to take in a function as a parameter and executes a function when called with a function as the argument.
+
+functionFeeder respectively becomes what is known as a higher-order function or a callBack function, allowing it to take in a function as a parameter and executes a function when called with a function as the argument.
+*/
   
-  functionFeeder respectively becomes what is known as a higher-order function or a callBack function, allowing it to take in a function as a parameter and executes a function when called with a function as the argument.
-  */
-  
-  // Example
-  function sayHello(name) {
-	console.log(`Hello, ${name}`);
-  }
-  
-  function callSayHelloWithLars(callback) {
-	const innerName = 'Lars';
-	callback(innerName);
-  }
-  
-  callSayHelloWithLars(sayHello);
-  
-  function callSayHelloWithRyan(callback) {
-	const newName = 'Ryan';
-	callback(newName);
-  }
-  
-  callSayHelloWithRyan(sayHello);
-  
+// Example
+function sayHello(name) {
+console.log(`Hello, ${name}`);
+}
+
+function callSayHelloWithLars(callback) {
+const innerName = 'Lars';
+callback(innerName);
+}
+
+callSayHelloWithLars(sayHello);
+
+function callSayHelloWithRyan(callback) {
+const newName = 'Ryan';
+callback(newName);
+}
+
+callSayHelloWithRyan(sayHello);
 
 
+///////////    CALLBACKS IN ARRAYS      ///////////
+
+const items = ['feather', 'coupon', 'cup', 'drill'];
+
+// We could use a native for loop to loop over this list and log out every item.
+/*
+for(let i = 0; i < items.length; i ++) {
+  alert(items[i]);
+}
+*/
+
+// OR 
+// items.forEach(item =>  alert(item) );   
+// NOTICE this part is the callback item => alert(item)
+
+// FOLLOW ALONG
+// Remember that with functions we can pass as many parameters as we want to them. 
+
+const elements = ['earth', 'wind', 'fire', 'water'];
+
+// Create a function called show first that passes back the first item in the given array.
+
+function showFirst(array, callback) {
+  callback(array[0]);
+}
+
+showFirst(elements, (firstItem) => {
+  alert(firstItem);
+});
 
 
 
