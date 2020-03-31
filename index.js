@@ -246,6 +246,18 @@ function greetCaller(callback) {
 greetCaller(greet);
 
 
+/*
+  Problem 2: forEach
+  use .forEach to loop over the simpsons list and alert each name passed back to your anonymous callback to the console. 
+*/
+
+const simpsons = ['Marge', 'Lisa', 'Homer', 'Bart', 'Maggie'];
+
+// code for `forEach` goes here
+//simpsons.forEach(item => alert(item)); 
+
+
+
 
 
 
