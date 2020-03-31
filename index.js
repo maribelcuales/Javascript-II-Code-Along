@@ -280,6 +280,16 @@ every(simpsons, (items) => {
 })
 
 
+// OR WRITE IT LIKE THIS:  
+/*
+function arrayLoop(array) {
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i]);
+  }
+}
+
+every(simpsons, arrayLoop);
+*/
 
 
 
