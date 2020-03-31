@@ -222,6 +222,29 @@ elements.forEach(element => alert(element));
 //const newArray = elements.map(item => ‘Element: ‘ + item);
 
 
+// EXERCISE/ CHALLENGE
+
+/*
+  Problem 1: Greet
+  Create a function called `greet` that takes in a 'name' parameter
+  simply use that function to alert the name provided;
+  Next, create a function called `greetCaller` that takes a callback parameter
+  our greetCaller function should declare a name variable and pass it to the callback.
+  Invoke greetCaller with greet passed into it.
+*/
+
+// code greet here.
+function greet(name) {
+  console.log(name);
+}
+
+function greetCaller(callback) {
+  const caller = 'Aurora';
+  callback(caller);
+}
+
+greetCaller(greet);
+
 
 
 
