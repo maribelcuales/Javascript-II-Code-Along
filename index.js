@@ -166,7 +166,7 @@ callback(newName);
 callSayHelloWithRyan(sayHello);
 
 
-///////////    CALLBACKS IN ARRAYS      ///////////
+///////////    CALLBACKS IN ARRAY      ///////////
 
 const items = ['feather', 'coupon', 'cup', 'drill'];
 
@@ -212,6 +212,17 @@ function showLength(array, callback) {
 showLength(elements, (length) => {
   alert(length);
 });
+
+// Now, let’s use forEach again to loop over our array and alert each item in the array.
+
+elements.forEach(element => alert(element));
+
+// The most significant difference between .forEach and .map is that map returns a new array of elements while in turn passing each element back to the callback.
+
+//const newArray = elements.map(item => ‘Element: ‘ + item);
+
+
+
 
 
 
