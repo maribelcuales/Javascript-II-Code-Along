@@ -257,6 +257,29 @@ const simpsons = ['Marge', 'Lisa', 'Homer', 'Bart', 'Maggie'];
 //simpsons.forEach(item => alert(item)); 
 
 
+/*
+  Problem 3: every
+  create a function called `every` that takes in an array and a callback as it's parameters
+  loop over every single item (using a native for loop) and pass each item to the callback
+  When you're done, make sure that you finish the code inside of `every` and ensure it works the way it's supposed to
+*/
+
+// every(simpsons, (/* don't forget your items */) => {
+   // fill this in.
+   // log ieach item that comes back to the console.
+// });
+
+function every(array, callback) {
+  callback(array);
+}
+
+every(simpsons, (items) => {
+  for(let i = 0; i < simpsons.length; i++) {
+  console.log(simpsons[i]);
+  }
+})
+
+
 
 
 
