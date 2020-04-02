@@ -376,6 +376,21 @@ const reduceStatePopulations = data.reduce((total, state) => {
 
 console.log(reduceStatePopulations);
 
+// First of all, we’re passing 0 as a second argument to our reduce function. 
+// This argument will become the starting value of our total and, if not provided, would default to the first item in the array.
+
+// In this case, that would be disastrous because the first item of our array is an object, and we’re trying to reduce our total to a single numerical value. 
+
+// Instead, we can provide a starting value for total and thus set what our data type will reduce to. Remember that total also gets remembered by our function each pass.
+
+// The four items that get passed back from our callback function when using .reduce are:
+
+// The current value of the total aggregated value.
+// We set the initial value at the end of the function. In this case, we set it to 0.
+// (This could be any value, though.)
+// The current item in the array.
+// The index again.
+// The full array.
 
 
 
