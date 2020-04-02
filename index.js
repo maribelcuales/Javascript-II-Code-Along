@@ -356,6 +356,17 @@ console.log(filterLargeStates);
 // Think of that line reading like this: IF state.population is greater than or equal to 650000 then push it into a new array else do nothing.
 
 
+// *****   .reduce   *****
+// Gives us access to a ‘reduced’ set of information about our data.
+// USE: If we want our data reduced to a single value, we can aggregate that data and use .reduce to do so for us. 
+
+
+// Task 3: We want a single number of all of the state’s populations added together.
+
+let statePopulations = 0;
+for(let i = 0; i < data.length; i++) {
+  statePopulations += data[i].population;
+}
 
 
 
