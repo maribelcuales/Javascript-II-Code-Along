@@ -292,5 +292,47 @@ every(simpsons, arrayLoop);
 */
 
 
+///////////    ADVANCED ARRAY METHODS      ///////////
+
+//The .map .filter and .reduce functions are commonly used to achieve immutability and take a set of data and transform it in some way.
+
+const data = [
+  {"city":"seattle", "state":"WA", "population":652405, "land_area":83.9},
+  {"city":"new york", "state":"NY", "population":8405837, "land_area":302.6},
+  {"city":"boston", "state":"MA", "population":645966, "land_area":48.3},
+  {"city":"kansas city", "state":"MO", "population":467007, "land_area":315}
+];
+
+// *****   .map   *****
+// Task 1: Map the data to a new array, with objects of just city and state names. We could achieve this (and any of our tasks the traditional way)
+
+const cityStates = [];
+for(let i = 0; i < data.length; i++) {
+  let mappedObj = {};
+  mappedObj.city = data[i].city;
+  mappedObj.state = data[i].state;
+  cityStates.push(mappedObj);
+  mappedObj = {};
+}
+
+// BETTER: 
+const mappedCityStates = data.map((state) => {
+  return {'city': state.city, 'state': state.state};
+});
+
+// Remember that our map function takes in a callback that passes back a couple of things to us. The three things you’d get back from a callback passed to Map would be:
+
+// 1. The current item of the array: state
+// 2. The current index of the current item: index
+// 3. The entire array: data
+
+const mappedCityStates2 = data.map((state, index, data) => {
+  return {'city': state.city, 'state': state.state};
+});
+
+console.log(mappedCityStates2);
+
+
+
 
 
