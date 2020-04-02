@@ -368,7 +368,13 @@ for(let i = 0; i < data.length; i++) {
   statePopulations += data[i].population;
 }
 
+// BETTER:
 
+const reduceStatePopulations = data.reduce((total, state) => {
+  return total += state.population;
+}, 0);
+
+console.log(reduceStatePopulations);
 
 
 
