@@ -333,6 +333,32 @@ const mappedCityStates2 = data.map((state, index, data) => {
 console.log(mappedCityStates2);
 
 
+// *****   .filter   *****
+// Task 2: Return states who’s population is greater than 650,000.  
+
+// Remember that filter returns an item that passes what is called a truth test. Its really straight forward, but requires a bit of formal logic. Lets take the naive solution first:
+
+const largeStates = [];
+for(let i = 0; i < data.length; i++) {
+  if(data[i].population >= 650000) {
+    largeStates.push(data[i]);
+  }
+}
+
+// BETTER: Same results and cleaner code.
+const filterLargeStates = data.filter((state) => {
+  return state.population >= 650000;
+});
+console.log(filterLargeStates);
+
+// On this line return state.population >= 650000; we are explicitly returning an object whose population is higher than 650,000, and in turn, passing that object to a new array. 
+// So the other objects will be ignored if they don’t pass this logic test. 
+// Think of that line reading like this: IF state.population is greater than or equal to 650000 then push it into a new array else do nothing.
+
+
+
+
+
 
 
 
