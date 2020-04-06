@@ -393,4 +393,22 @@ console.log(reduceStatePopulations);
 // The full array.
 
 
+// FOLLOW ALONG: 
+
+const cityData = [
+  {"city":"seattle", "state":"WA", "population":652405, "land_area":83.9},
+  {"city":"new york", "state":"NY", "population":8405837, "land_area":302.6},
+  {"city":"boston", "state":"MA", "population":645966, "land_area":48.3},
+  {"city":"kansas city", "state":"MO", "population":467007, "land_area":315}
+];
+
+// Use .map to create an array of integers that represent all the states populations.
+
+const statePopulation = cityData.map((item) => {
+  return item.population; 
+}) 
+
+console.log(statePopulation);
+
+
 
