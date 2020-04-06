@@ -420,6 +420,18 @@ const filteredStates = cityData.filter((state) => {
 console.log(filteredStates);
 
 
+// Use .reduce to create an array of the states land_area reduced to the mean average of all the state’s combined.
+
+const sumLandArea = cityData.reduce((total, state) => {
+  return total += state.land_area; 
+}, 0);
+
+console.log(sumLandArea);
+
+const averageLandArea = sumLandArea / cityData.length; 
+  
+console.log(averageLandArea);
+
 
 
 
