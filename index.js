@@ -411,4 +411,15 @@ const statePopulation = cityData.map((item) => {
 console.log(statePopulation);
 
 
+// Use .filter to create an array of states who’s land_area is larger than 50 units.
+
+const filteredStates = cityData.filter((state) => {
+  return state.land_area >= 50;
+})
+
+console.log(filteredStates);
+
+
+
+
 
